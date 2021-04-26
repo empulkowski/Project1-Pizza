@@ -1,0 +1,43 @@
+body {
+    font-family: sans-serif;
+    background-image: url("pizzacrop2.jpg");
+    background-repeat: no-repeat;
+}
+a {
+    color: darkred;
+}
+
+a:hover {
+    color: olivedrab;
+}
+
+
+
+h2 {
+    text-transform: uppercase;
+    padding-top: 20px;
+    color: darkred;
+}
+
+legend {
+    text-transform: uppercase;
+    color: olivedrab;
+}
+
+.container{
+    background-color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+
+}
+
+
+
+#first-name, #last-name, #street-address, #zip, #state, #city, #phone {
+    margin-top: 20px;
+}
+
+#phone {
+    margin-bottom: 20px;
+}

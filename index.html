@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Order Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="code.js"></script>
+    <link rel="stylesheet" href="pizza.css">
+</head>
+
+<body id="page">
+    <div class="container">
+
+        <nav>
+
+            <ul id="tabs" class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#yourOrder">Create</a></li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#deliveryInfo">Delivery Information</a></li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#confirmation">Confirmation</a></li>
+            </ul>
+
+        </nav>
+
+
+
+
+
+<div class="tab-content">
+
+
+    <div id="yourOrder" class="tab-pane active"><!--TAB 1 ORDER SPECS FOR PIZZA-->
+        <h2>Create your Pizza</h2>
+        <br>
+
+        <fieldset>
+            <Legend>Choose your size:</Legend>
+            <div class="pizza-size">
+                <input type="radio" name="size" id="sm"
+                       data-price="$7" value="small" class="pizza-size" checked="checked">
+                <label class="pizza-size-label" for="sm">Small</label>
+            </div>
+            <div class="pizza-size">
+                <input type="radio" name="size" id="med"
+                       data-price="$9" value="small" class="pizza-size">
+                <label class="pizza-size-label" for="med">Medium</label>
+            </div>
+            <div class="pizza-size">
+                <input type="radio" name="size" id="lrg"
+                       data-price="$12" value="large" class="pizza-size">
+                <label class="pizza-size-label" for="med">Large</label>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <Legend>Choose your crust:</Legend>
+            <div class="pizza-crust">
+                <input type="radio" name="crust" id="thin"
+                       data-price="0" value="thin" class="pizza-crust" checked="checked">
+                <label class="pizza-crust-label" for="thin">Thin</label>
+            </div>
+            <div class="pizza-crust">
+                <input type="radio" name="crust" id="pan"
+                       data-price="0" value="pan" class="pizza-crust">
+                <label class="pizza-crust-label" for="pan">Pan</label>
+            </div>
+            <div class="pizza-crust">
+                <input type="radio" name="crust" id="gf"
+                       data-price="0" value="gluten-free" class="pizza-crust">
+                <label class="pizza-crust-label" for="gf">Gluten Free</label>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <Legend>Choose Your Meat:</Legend>
+            <div class="meat">
+                <input type="checkbox" name="meat" id="meat-sausage"
+                       data-price="$1.50" value="sausage" class="meat-choice-input">
+                <label class="meat-choice-label" for="meat-sausage">Sausage</label>
+            </div>
+            <div class="pizza-crust">
+                <input type="checkbox" name="meat" id="meat-pep"
+                       data-price="$1.50" value="pep" class="meat-choice-input">
+                <label class="meat-choice-label" for="meat-pep">Pepperoni</label>
+            </div>
+            <div class="pizza-crust">
+                <input type="checkbox" name="meat" id="meat-ham"
+                       data-price="$1.50" value="ham" class="meat-choice-input">
+                <label class="meat-choice-label" for="meat-ham">Ham</label>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <Legend>Choose Your Veggies:</Legend>
+            <div class="veggie">
+                <input type="checkbox" name="veggie" id="veggie-mushroom"
+                       data-price="$1" value="mushroom" class="veggie-choice-input">
+                <label class="veggie-choice-label" for="veggie-mushroom">Mushroom</label>
+            </div>
+            <div class="veggie">
+                <input type="checkbox" name="veggie" id="veggie-onion"
+                       data-price="$1" value="onion" class="veggie-choice-input">
+                <label class="veggie-choice-label" for="veggie-onion">Onion</label>
+            </div>
+            <div class="veggie">
+                <input type="checkbox" name="veggie" id="veggie-pepper"
+                       data-price="$1" value="pepper" class="veggie-choice-input">
+                <label class="veggie-choice-label" for="veggie-pepper">Pepper</label>
+            </div>
+        </fieldset>
+        <p id="total">
+    </div><!--TAB 1 ORDER SPECS FOR PIZZA CLOSED-->
+
+    <div id="deliveryInfo" class="tab-pane"><!--TAB 2 DELIVERY INFO-->
+        <h2>Delivery Information</h2>
+
+        <label for="first-name">First Name</label>
+        <input type="text" name="info" id="first-name">
+        <br>
+        <label for="last-name">Last Name</label>
+        <input type="text" name="info" id="last-name">
+        <br>
+        <label for="street-address">Street Address</label>
+        <input type="text" name="info" id="street-address">
+        <br>
+        <label for="city">City</label>
+        <input type="text" name="info" id="city">
+        <br>
+        <label for="state">State</label>
+        <input type="text" name="info" id="state">
+        <br>
+        <label for="zip">Zip Code</label>
+        <input type="text" name="info" id="zip">
+        <br>
+        <label for="phone">Phone Number</label>
+        <input type="text" name="info" id="phone">
+    </div> <!--TAB 2 DELIVERY INFO CLOSED-->
+
+
+
+    <div id="confirmation" class="tab-pane"><!--TAB 3 CONFIRMATION TAB-->
+        <h2>Order Confirmation</h2>
+
+
+
+    </div><!--CLOSES TAB 3 CONFIRMATION TAB-->
+
+
+
+
+
+
+
+
+
+</div><!--CLOSES TAB CONTENT-->
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+    <!--copied over from tabs exersize-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <!-- Popper and Bootstrap second -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Our code last -->
+    <script src="tabs.js"></script>
+</body>
+</html>
